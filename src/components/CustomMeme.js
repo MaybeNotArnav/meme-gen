@@ -1,13 +1,12 @@
 import { Container ,Box} from "@mui/system";
-import React , {useContext,createContext} from "react";
-import {Image} from '../App.js'
+import React , {useContext} from "react";
+import {Template} from '../App.js'
 
 export default function CustomMeme(props){
-    const meme=useContext(Image)
-    // console.log(Image)
+    const temp = useContext(Template)
     return(
         <Box sx={{width:'vw'}}>
-        <img src={meme} height='500px'></img>
+        {temp && <img src={temp.url} height='500px'></img>}
         </Box>
     )
 }
