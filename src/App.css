@@ -1,28 +1,27 @@
-.App{
+.App {
   text-align: center;
   background-color: rgb(16, 7, 66);
 }
 .meme-list {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 20px;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   width: 100%;
 }
 .meme {
   font-size: 12px;
-  flex: 0 0 auto;         /* ADD */
-  display: flex;          /* ADD */
-  flex-direction: column; /* ADD */
+  flex: 0 0 auto; /* ADD */
+  display: flex; /* ADD */
+  flex-direction: column;
 }
 
 .meme--image {
   width: 100%;
-  height:100px;
+  height: 150px;
   border-radius: 9px;
   margin-bottom: 9px;
 }
-.meme--image:hover{
+.meme--image:hover {
   cursor: pointer;
 }
-
