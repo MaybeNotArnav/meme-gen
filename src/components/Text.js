@@ -40,10 +40,7 @@ axios.post('https://api.imgflip.com/caption_image',null,{params:{
 
     return(
         <div>
-        <form method="POST">
-            {/* <input type="text" name='first' onChange={handleChange}></input>
-            <input type="text" name ='second' onChange={handleChange}></input>
-            <input type='submit' ></input> */}
+        <form method="POST" className="meme-form">
             {form}
             <Button variant='contained' onClick={Test}>Test</Button>
         </form>

@@ -38,13 +38,14 @@ function getMemes(event){
     }
 
 return(
-    <Box sx={{
-        height:'500px',
+    <Box className='MemeNav'sx={{
+        height:'100%',
+        width :'50%'
     }}>
-    <Pagination count={10} page={page} onChange={handlePage} variant='outlined'></Pagination>
     <div className='meme-list'>
     {pageDisplay()}
     </div> 
+    <Pagination count={10} page={page} onChange={handlePage} variant='outlined' color="primary"></Pagination>
     </Box>
 
 )

@@ -39,14 +39,13 @@ export default function App() {
   },[])
   
   function handleChange(){
-    const view = theme.backgroundColor==='white'?{backgroundColor:'rgb(16, 7, 66)'}:{backgroundColor:'white'}
+    const view = theme.backgroundColor==='#FCFDF2'?{backgroundColor:'#3B3486'}: {backgroundColor:'#FCFDF2'}
     setTheme(view)
   }
 
   console.log(template)
 return (
-  <div className='App'>
-  <Container maxwidth='md'sx={theme}>
+  <Box className='App'sx={theme}>
   Darkmode
   <Switch onChange={handleChange} InputProps={{ 'aria-label': 'controlled' }}></Switch>
   {/* <MemeNav list={memeObj} temp={setTemplate} ></MemeNav> */}
@@ -63,8 +62,7 @@ return (
   </Template.Provider>
   </BrowserRouter>
 
-  </Container>
-  </div>
+  </Box>
 );
 }
 
