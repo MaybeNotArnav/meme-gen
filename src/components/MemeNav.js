@@ -1,6 +1,5 @@
-import React, { useContext ,useState,useEffect} from "react";
-import { Template } from "../App";
-import { Link ,Outlet} from "react-router-dom";
+import React, {useState} from "react";
+import { Link } from "react-router-dom";
 import { Pagination } from "@mui/material";
 import { Box } from "@mui/system";
 
@@ -25,7 +24,7 @@ const allMemesImg = props.list.map(meme=>{
     return (
         <div className='meme' key={meme.id}>
         <Link to={`test`}>
-            <img id={meme.id}src={meme.url} className='meme--image' onClick={getMemes} ></img>
+            <img alt={meme.name} id={meme.id}src={meme.url} className='meme--image' onClick={getMemes} ></img>
         </Link>
     </div>)
     })

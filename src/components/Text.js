@@ -32,8 +32,8 @@ function handleChange(event){
 function Test(){
 axios.post('https://api.imgflip.com/caption_image',null,{params:{
     template_id: template.id,
-    username: 'ArnavM',
-    password: 'meme@2022',
+    username: process.env.REACT_APP_USERNAME,
+    password: process.env.REACT_APP_PASSWORD,
     boxes : box
 }},).then((response)=>setFinMeme(response.data.data.url))
 }
@@ -44,7 +44,7 @@ axios.post('https://api.imgflip.com/caption_image',null,{params:{
             {form}
             <Button variant='contained' onClick={Test}>Test</Button>
         </form>
-        {finMeme &&<img src={finMeme}></img>}
+        {finMeme &&<img alt='CustomMeme'src={finMeme}></img>}
         </div>
     )
 }

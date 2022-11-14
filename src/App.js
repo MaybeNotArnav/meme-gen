@@ -1,12 +1,12 @@
 import './App.css';
-import { Container ,Box,Switch} from "@mui/material";
+import { Box,Switch} from "@mui/material";
 // import Switch 
 import axios from 'axios'
 import { useState ,useEffect,createContext} from 'react';
 import CustomMeme from './components/CustomMeme';
 import MemeNav from './components/MemeNav';
 import Text from './components/Text'
-import { BrowserRouter, Link, Route, Routes,Outlet } from 'react-router-dom';
+import { BrowserRouter,  Route, Routes,Outlet } from 'react-router-dom';
 
 export const Template= createContext()
 export default function App() {
@@ -43,11 +43,10 @@ export default function App() {
     setTheme(view)
   }
 
-  console.log(template)
 return (
   <Box className='App'sx={theme}>
   Darkmode
-  <Switch onChange={handleChange} InputProps={{ 'aria-label': 'controlled' }}></Switch>
+  <Switch onChange={handleChange} inputprops={{ 'aria-label': 'controlled' }}></Switch>
   {/* <MemeNav list={memeObj} temp={setTemplate} ></MemeNav> */}
   
   <BrowserRouter>
