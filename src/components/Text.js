@@ -35,7 +35,7 @@ axios.post('https://api.imgflip.com/caption_image',null,{params:{
     username: process.env.REACT_APP_USERNAME,
     password: process.env.REACT_APP_PASSWORD,
     boxes : box
-}},).then((response)=>setFinMeme(response.data.data.url))
+}}).then((response)=>setFinMeme(response.data.data.url))
 }
 
     return(

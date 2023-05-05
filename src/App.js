@@ -7,11 +7,12 @@ import CustomMeme from './components/CustomMeme';
 import MemeNav from './components/MemeNav';
 import Text from './components/Text'
 import { BrowserRouter,  Route, Routes,Outlet } from 'react-router-dom';
+import TestForm from './components/TestForm';
 
 export const Template= createContext()
 export default function App() {
   const [memeObj,setMemeObj]=useState([])
-  const [theme,setTheme]=useState({backgroundColor:'white'})
+  const [theme,setTheme]=useState({backgroundColor:'#FCFDF2'})
   const [template,setTemplate]=useState(undefined)
   const [id,setId]=useState(0)
 
@@ -55,6 +56,7 @@ return (
   <Routes>
   <Route path='/' element={<MemeNav list={memeObj} handleId={setId}/>}></Route>
   <Route path='/test' element={<><CustomMeme /><Text></Text></>}></Route>
+  <Route path='/form' element={<TestForm></TestForm>}></Route>
   </Routes>
 
   <Outlet />
